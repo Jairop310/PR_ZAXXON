@@ -7,6 +7,8 @@ public class Player_Movement : MonoBehaviour
     [SerializeField] GameObject otroObjeto;
     private Variables_Publicas variables_Publicas;
     [SerializeField] float rotationSpeed;
+    
+    //Limites de movimiento vertical y horizontal 
     float limiteH = 18f;
     float limiteVDown = 0.5f;
     float limiteVUp = 10f;
@@ -15,6 +17,7 @@ public class Player_Movement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Llamada de variables que estan en otros scripts
         variables_Publicas = otroObjeto.GetComponent<Variables_Publicas>();
         variables_Publicas.speed = 10;
         rotationSpeed = 100f;
@@ -23,17 +26,36 @@ public class Player_Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        MoverNave();
+    }
+     
+    void MoverNave()
+    {
+        //Variables de movimiento y rotacion
         float desplH = Input.GetAxis("Horizontal");
         float desplV = Input.GetAxis("Vertical");
         float desplR = Input.GetAxis("Rotation");
+        //Variables De restriccion de movimiento
         float posX = transform.position.x;
         float posY = transform.position.y;
 
-        transform.Translate(Vector3.right * Time.deltaTime * variables_Publicas.speed * desplH);
-        transform.Translate(Vector3.up * Time.deltaTime * variables_Publicas.speed * desplV);
-        transform.Rotate(0f, 0f, desplR * Time.deltaTime * -rotationSpeed);
+       //Rotacion de la Nave(Opcional)
+       // transform.Rotate(0f, 0f, desplR * Time.deltaTime * -rotationSpeed);
 
-        if(posX > limiteH && desplH > 0)
+        //Restriccion de movimiento (Manera del profesor)
+
+        if ((posX < limiteH || desplH < 0f) && (posX > -limiteH || desplH > 0f))
+        {
+            transform.Translate(Vector3.right * Time.deltaTime * variables_Publicas.speed * desplH);
+        }
+        if ((posY > limiteVDown || desplV > 0f) && (posY < limiteVUp || desplV < 0f))
+        {
+            transform.Translate(Vector3.up * Time.deltaTime * variables_Publicas.speed * desplV);
+        }
+
+        /*
+        //Restriccion de movimiento (No es la manera del profesor)
+        if (posX > limiteH && desplH > 0)
         {
             transform.position = new Vector3(posX, transform.position.y, transform.position.z);
         }
@@ -49,8 +71,10 @@ public class Player_Movement : MonoBehaviour
         {
             transform.position = new Vector3(transform.position.x, posY, transform.position.z);
         }
-
+        */
     }
+
+
 
 }
 
