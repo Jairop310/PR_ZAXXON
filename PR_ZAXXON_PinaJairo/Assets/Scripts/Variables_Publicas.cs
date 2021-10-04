@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Variables_Publicas : MonoBehaviour
 {
-    public int speed = 100;
+    public int speed;
     public int puntuacion;
     public int vidas;
    
@@ -12,7 +12,7 @@ public class Variables_Publicas : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        speed = 25;
     }
 
     // Update is called once per frame

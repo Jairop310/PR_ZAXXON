@@ -7,6 +7,7 @@ public class Player_Movement : MonoBehaviour
     [SerializeField] GameObject otroObjeto;
     private Variables_Publicas variables_Publicas;
     [SerializeField] float rotationSpeed;
+    int speed;
     
     //Limites de movimiento vertical y horizontal 
     float limiteH = 18f;
@@ -19,7 +20,6 @@ public class Player_Movement : MonoBehaviour
     {
         //Llamada de variables que estan en otros scripts
         variables_Publicas = otroObjeto.GetComponent<Variables_Publicas>();
-        variables_Publicas.speed = 10;
         rotationSpeed = 100f;
     }
 
@@ -27,6 +27,7 @@ public class Player_Movement : MonoBehaviour
     void Update()
     {
         MoverNave();
+        speed = variables_Publicas.speed;
     }
      
     void MoverNave()
@@ -46,11 +47,11 @@ public class Player_Movement : MonoBehaviour
 
         if ((posX < limiteH || desplH < 0f) && (posX > -limiteH || desplH > 0f))
         {
-            transform.Translate(Vector3.right * Time.deltaTime * variables_Publicas.speed * desplH);
+            transform.Translate(Vector3.right * Time.deltaTime * speed * desplH);
         }
         if ((posY > limiteVDown || desplV > 0f) && (posY < limiteVUp || desplV < 0f))
         {
-            transform.Translate(Vector3.up * Time.deltaTime * variables_Publicas.speed * desplV);
+            transform.Translate(Vector3.up * Time.deltaTime * speed * desplV);
         }
 
         /*

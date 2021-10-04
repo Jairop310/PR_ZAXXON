@@ -822,6 +822,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   columna: {fileID: 88483632297482208, guid: f3e467ee552cb6a42bb9b6bec7891323, type: 3}
+  instantiatePosicion: {fileID: 1658595626}
 --- !u!4 &1658595626
 Transform:
   m_ObjectHideFlags: 0
@@ -830,7 +831,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1658595624}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.6880183, y: 5.119492, z: 19.9709}
+  m_LocalPosition: {x: 0, y: 0, z: 80.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
