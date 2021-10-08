@@ -23,6 +23,13 @@ public class Columna_Move : MonoBehaviour
     {
         speed = variables_Publicas.speed;
         transform.Translate(Vector3.back * Time.deltaTime * speed);
+
+        //Destruccion del Objeto cuando llega a una determinada posicion
+        float desplZ = transform.position.z;
+        if (desplZ < -30)
+        {
+            Destroy(gameObject);
+        }
     }
     
 
