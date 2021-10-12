@@ -9,6 +9,7 @@ public class Variables_Publicas : MonoBehaviour
     public int vidas;
 
 
+
     // Start is called before the first frame update
     void Start()
     {
