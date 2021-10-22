@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class Player_Movement : MonoBehaviour
 {
+    //Recogida de variables publicas
     [SerializeField] GameObject otroObjeto;
     private Variables_Publicas variables_Publicas;
     [SerializeField] float rotationSpeed;
     int speed;
+    int vidas;
     
     //Limites de movimiento vertical y horizontal 
     float limiteH = 18f;
-    float limiteVDown = 0.5f;
+    float limiteVDown = 1f;
     float limiteVUp = 10f;
+    
 
 
     // Start is called before the first frame update
@@ -21,6 +24,7 @@ public class Player_Movement : MonoBehaviour
         //Llamada de variables que estan en otros scripts
         variables_Publicas = otroObjeto.GetComponent<Variables_Publicas>();
         rotationSpeed = 100f;
+   
     }
 
     // Update is called once per frame
@@ -28,6 +32,7 @@ public class Player_Movement : MonoBehaviour
     {
         MoverNave();
         speed = variables_Publicas.speed;
+        vidas = variables_Publicas.vidas;
     }
      
     void MoverNave()
@@ -73,6 +78,26 @@ public class Player_Movement : MonoBehaviour
             transform.position = new Vector3(transform.position.x, posY, transform.position.z);
         }
         */
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.layer == 16)
+        {
+            if(vidas > 0)
+            {
+                variables_Publicas.vidas--;
+                print("Te han dado");
+            }
+            else
+            {
+                print("Muerto");
+                //Script para que el mesh Renderer del hijo desaparezca
+                gameObject.GetComponentInChildren<MeshRenderer>().enabled = false;
+                variables_Publicas.speed = 0;
+            }
+
+        }
     }
 
 

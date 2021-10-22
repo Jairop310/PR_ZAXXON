@@ -14,14 +14,21 @@ public class Variables_Publicas : MonoBehaviour
     void Start()
     {
         speed = 25;
+        vidas = 3;
         StartCoroutine("puntSum");
+        
 
     }
 
     // Update is called once per frame
     void Update()
     {
+        //StartCoroutine("aumentoDevelocidad");
 
+        if (vidas < 1)
+        {
+            StopAllCoroutines();
+        }
     }
     IEnumerator puntSum()
     {
@@ -32,4 +39,13 @@ public class Variables_Publicas : MonoBehaviour
             yield return new WaitForSeconds(1f);
         }
     }
+
+   /*IEnumerator aumentoDevelocidad()
+    {
+        if (puntuacion > 100)
+        {
+            speed = 50;
+        }
+        yield return new WaitForSeconds(0.01f);
+    }*/
 }

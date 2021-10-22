@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6814578242095855883}
   - component: {fileID: 7108347539443722822}
-  m_Layer: 0
+  - component: {fileID: 1732903911208955319}
+  m_Layer: 16
   m_Name: Columna
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46,6 +47,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   otroObjeto: {fileID: 0}
+--- !u!136 &1732903911208955319
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 88483632297482208}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 14.89
+  m_Direction: 1
+  m_Center: {x: 0, y: -3.6, z: 0}
 --- !u!1 &362576993176723084
 GameObject:
   m_ObjectHideFlags: 0
@@ -57,8 +72,7 @@ GameObject:
   - component: {fileID: 9055650664823995923}
   - component: {fileID: 4188302451883269202}
   - component: {fileID: 3225903690971752573}
-  - component: {fileID: 9192507852069281347}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: CuerpoColumna
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -128,20 +142,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &9192507852069281347
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 362576993176723084}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!1 &2006089581345389119
 GameObject:
   m_ObjectHideFlags: 0
@@ -153,8 +153,7 @@ GameObject:
   - component: {fileID: 3087979016761713364}
   - component: {fileID: 3205231692374402895}
   - component: {fileID: 129833477052577715}
-  - component: {fileID: 8144980749299728167}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Luz
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -224,19 +223,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &8144980749299728167
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2006089581345389119}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8388870848753971879
 GameObject:
   m_ObjectHideFlags: 0
@@ -248,8 +234,7 @@ GameObject:
   - component: {fileID: 5992689641957963098}
   - component: {fileID: 2330818375029009744}
   - component: {fileID: 9105834540095647024}
-  - component: {fileID: 2020066676827385100}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: CabezaDeColumna
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -320,17 +305,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &2020066676827385100
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8388870848753971879}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}

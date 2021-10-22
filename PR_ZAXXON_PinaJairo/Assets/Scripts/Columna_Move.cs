@@ -31,6 +31,8 @@ public class Columna_Move : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    
+
+   
+
 
 }
