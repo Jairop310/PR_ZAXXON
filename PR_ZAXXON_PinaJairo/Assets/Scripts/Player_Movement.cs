@@ -7,7 +7,7 @@ public class Player_Movement : MonoBehaviour
     //Recogida de variables publicas
     [SerializeField] GameObject otroObjeto;
     private Variables_Publicas variables_Publicas;
-    [SerializeField] float rotationSpeed;
+    
     int speed;
     int vidas;
     
@@ -23,7 +23,7 @@ public class Player_Movement : MonoBehaviour
     {
         //Llamada de variables que estan en otros scripts
         variables_Publicas = otroObjeto.GetComponent<Variables_Publicas>();
-        rotationSpeed = 100f;
+        
    
     }
 
@@ -97,6 +97,22 @@ public class Player_Movement : MonoBehaviour
                 variables_Publicas.speed = 0;
             }
 
+        }
+        if (other.gameObject.layer == 17)
+        {
+            if (other.gameObject.tag == ("Disparo"))
+            {
+                print("Más Disparos");
+            }
+            if(other.gameObject.tag == ("Velocidad"))
+            {
+                print("Mas Velocidad");
+            }
+            if(other.gameObject.tag == ("VidaUp"))
+            {
+                variables_Publicas.vidas++;
+                
+            }
         }
     }
 

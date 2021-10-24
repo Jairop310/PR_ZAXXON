@@ -8,7 +8,7 @@ public class Instanciador : MonoBehaviour
     [SerializeField] float distance;
     [SerializeField] GameObject [] obstaculos;
     [SerializeField] Transform instantiatePosicion;
-    [SerializeField] GameObject[] powerUps;
+    
 
 
     [SerializeField] GameObject otroObjeto;
@@ -97,21 +97,7 @@ public class Instanciador : MonoBehaviour
         }
     }
 
-   /*IEnumerator PowerUps()
-    {
-        while (true)
-        {
-            int numA = Random.Range(0, powerUps.Length);
-            float randomX = Random.Range(-18f, 18f); ;
-            float randomY = Random.Range(0.5f, 10.5f);
-          
-            Vector3 newPos = new Vector3(randomX, randomY, instantiatePosicion.position.z);
-            Instantiate(obstaculos[numA], newPos, Quaternion.identity);
-            speed = variables_Publicas.speed;
-            intervalo = (distance / speed);
-            yield return new WaitForSeconds(intervalo);
-        }
-    }*/
+   
         
     }
 

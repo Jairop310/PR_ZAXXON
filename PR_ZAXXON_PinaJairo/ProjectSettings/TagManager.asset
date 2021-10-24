@@ -7,6 +7,9 @@ TagManager:
   - Pared
   - Pared Superior
   - Pared Con Hueco
+  - Disparo
+  - Velocidad
+  - VidaUp
   layers:
   - Default
   - TransparentFX
@@ -25,7 +28,7 @@ TagManager:
   - 
   - 
   - Obstaculo
-  - 
+  - PowerUp
   - 
   - 
   - 
