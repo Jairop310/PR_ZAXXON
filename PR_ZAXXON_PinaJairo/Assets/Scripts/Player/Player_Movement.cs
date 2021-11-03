@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Player_Movement : MonoBehaviour
 {
@@ -15,7 +17,11 @@ public class Player_Movement : MonoBehaviour
     float limiteH = 18f;
     float limiteVDown = 1f;
     float limiteVUp = 10f;
-    
+
+    //Barra de vida
+    public Slider slider;
+    public Gradient gradient;
+    public Image fill;
 
 
     // Start is called before the first frame update
@@ -31,6 +37,7 @@ public class Player_Movement : MonoBehaviour
     void Update()
     {
         MoverNave();
+        TakeDamage();
         speed = variables_Publicas.speed;
         vidas = variables_Publicas.vidas;
     }
@@ -84,7 +91,7 @@ public class Player_Movement : MonoBehaviour
     {
         if(other.gameObject.layer == 16)
         {
-            if(vidas > 0)
+            if(vidas > 1)
             {
                 variables_Publicas.vidas--;
                 print("Te han dado");
@@ -94,7 +101,7 @@ public class Player_Movement : MonoBehaviour
                 print("Muerto");
                 //Script para que el mesh Renderer del hijo desaparezca
                 gameObject.GetComponentInChildren<MeshRenderer>().enabled = false;
-                variables_Publicas.speed = 0;
+                SceneManager.LoadScene(4);
             }
 
         }
@@ -108,14 +115,18 @@ public class Player_Movement : MonoBehaviour
             {
                 print("Mas Velocidad");
             }
-            if(other.gameObject.tag == ("VidaUp"))
+            if(other.gameObject.tag == ("VidaUp") && variables_Publicas.vidas <6)
             {
                 variables_Publicas.vidas++;
                 
             }
         }
     }
-
+    void TakeDamage()
+    {
+        fill.color = gradient.Evaluate(slider.normalizedValue);
+        slider.value = variables_Publicas.vidas;
+    }
 
 
 }

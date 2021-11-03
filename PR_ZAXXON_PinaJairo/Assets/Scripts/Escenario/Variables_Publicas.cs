@@ -6,7 +6,7 @@ public class Variables_Publicas : MonoBehaviour
 {
     public int speed;
     public int puntuacion;
-    public int vidas;
+    public  int vidas;
 
 
 
