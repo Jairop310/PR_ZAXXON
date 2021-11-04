@@ -23,6 +23,9 @@ public class Player_Movement : MonoBehaviour
     public Gradient gradient;
     public Image fill;
 
+    //Instanciar balas
+    public GameObject bala;
+    public Transform cannon;
 
     // Start is called before the first frame update
     void Start()
@@ -38,6 +41,7 @@ public class Player_Movement : MonoBehaviour
     {
         MoverNave();
         TakeDamage();
+        Disparo();
         speed = variables_Publicas.speed;
         vidas = variables_Publicas.vidas;
     }
@@ -126,6 +130,14 @@ public class Player_Movement : MonoBehaviour
     {
         fill.color = gradient.Evaluate(slider.normalizedValue);
         slider.value = variables_Publicas.vidas;
+    }
+    void Disparo()
+    {
+        if (Input.GetKeyDown("space"))
+        {
+            print("Disparando");
+            Instantiate(bala, cannon);
+        }
     }
 
 
