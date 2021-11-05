@@ -339,7 +339,6 @@ GameObject:
   - component: {fileID: 219526913}
   - component: {fileID: 219526912}
   - component: {fileID: 219526911}
-  - component: {fileID: 219526914}
   m_Layer: 5
   m_Name: Volver
   m_TagString: Untagged
@@ -391,7 +390,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.16862746, g: 0.5803922, b: 0.7058824, a: 1}
     m_PressedColor: {r: 0.043137256, g: 0.24705882, b: 1, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 0.16862746, g: 0.5803922, b: 0.7058824, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -411,9 +410,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 219526914}
-        m_TargetAssemblyTypeName: VolverIncio, Assembly-CSharp
-        m_MethodName: LoadScene
+      - m_Target: {fileID: 1879413223}
+        m_TargetAssemblyTypeName: NextScene, Assembly-CSharp
+        m_MethodName: Inicio
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -461,18 +460,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 219526909}
   m_CullTransparentMesh: 1
---- !u!114 &219526914
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 219526909}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab5011a025493eb4aa68aa9a1569e6a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &276025467
 GameObject:
   m_ObjectHideFlags: 0
@@ -733,7 +720,7 @@ GameObject:
   - component: {fileID: 435194741}
   - component: {fileID: 435194740}
   m_Layer: 5
-  m_Name: Text (2)
+  m_Name: 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1238,7 +1225,7 @@ GameObject:
   - component: {fileID: 988288706}
   - component: {fileID: 988288705}
   m_Layer: 5
-  m_Name: Text (4)
+  m_Name: 100
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1411,7 +1398,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
+  m_FirstSelected: {fileID: 219526909}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &995599389
@@ -1440,7 +1427,7 @@ GameObject:
   - component: {fileID: 1029999396}
   - component: {fileID: 1029999395}
   m_Layer: 5
-  m_Name: Text
+  m_Name: 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1767,7 +1754,7 @@ GameObject:
   - component: {fileID: 1350924644}
   - component: {fileID: 1350924643}
   m_Layer: 5
-  m_Name: Text (1)
+  m_Name: 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1899,6 +1886,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1399467090}
   - component: {fileID: 1399467091}
+  - component: {fileID: 1399467092}
   m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
@@ -1978,7 +1966,31 @@ MonoBehaviour:
   m_Value: 5
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1399467092}
+        m_TargetAssemblyTypeName: CambioVidas, Assembly-CSharp
+        m_MethodName: updateSlider
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1399467092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1399467089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63937fe6b4b358040aae9de065164c6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1577825414
 GameObject:
   m_ObjectHideFlags: 0
@@ -2332,6 +2344,94 @@ RectTransform:
   m_AnchoredPosition: {x: -5, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1879413222
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1879413224}
+  - component: {fileID: 1879413223}
+  m_Layer: 0
+  m_Name: CambioEscena
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1879413223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1879413222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ead07bf51ebc634ba0bb7768154977c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1879413224
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1879413222}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 159.17198, y: 115.47272, z: 87.38302}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1955923953
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1955923955}
+  - component: {fileID: 1955923954}
+  m_Layer: 0
+  m_Name: Variables
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1955923954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1955923953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22010832102bd3242b1749e33374cacd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  mySlider: {fileID: 1399467091}
+--- !u!4 &1955923955
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1955923953}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 185.06413, y: 107.58682, z: 92.88532}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2120814559
 GameObject:
   m_ObjectHideFlags: 0
@@ -2344,7 +2444,7 @@ GameObject:
   - component: {fileID: 2120814562}
   - component: {fileID: 2120814561}
   m_Layer: 5
-  m_Name: Text (3)
+  m_Name: 0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -13,6 +13,7 @@ public class Player_Movement : MonoBehaviour
     int speed;
     int vidas;
     
+    
     //Limites de movimiento vertical y horizontal 
     float limiteH = 18f;
     float limiteVDown = 1f;
@@ -26,6 +27,8 @@ public class Player_Movement : MonoBehaviour
     //Instanciar balas
     public GameObject bala;
     public Transform cannon;
+
+    
 
     // Start is called before the first frame update
     void Start()
@@ -42,8 +45,10 @@ public class Player_Movement : MonoBehaviour
         MoverNave();
         TakeDamage();
         Disparo();
+      
         speed = variables_Publicas.speed;
-        vidas = variables_Publicas.vidas;
+        vidas = Variables_Publicas.vidasRestantes;
+      
     }
      
     void MoverNave()
@@ -97,12 +102,12 @@ public class Player_Movement : MonoBehaviour
         {
             if(vidas > 1)
             {
-                variables_Publicas.vidas--;
-                print("Te han dado");
+                Variables_Publicas.vidasRestantes--;
+                
             }
             else
             {
-                print("Muerto");
+                
                 //Script para que el mesh Renderer del hijo desaparezca
                 gameObject.GetComponentInChildren<MeshRenderer>().enabled = false;
                 SceneManager.LoadScene(4);
@@ -119,9 +124,9 @@ public class Player_Movement : MonoBehaviour
             {
                 print("Mas Velocidad");
             }
-            if(other.gameObject.tag == ("VidaUp") && variables_Publicas.vidas <6)
+            if(other.gameObject.tag == ("VidaUp") && Variables_Publicas.vidasRestantes <6)
             {
-                variables_Publicas.vidas++;
+                Variables_Publicas.vidasRestantes++;
                 
             }
         }
@@ -129,7 +134,7 @@ public class Player_Movement : MonoBehaviour
     void TakeDamage()
     {
         fill.color = gradient.Evaluate(slider.normalizedValue);
-        slider.value = variables_Publicas.vidas;
+        slider.value = Variables_Publicas.vidasRestantes;
     }
     void Disparo()
     {
@@ -139,7 +144,6 @@ public class Player_Movement : MonoBehaviour
             Instantiate(bala, cannon);
         }
     }
-
 
 }
 

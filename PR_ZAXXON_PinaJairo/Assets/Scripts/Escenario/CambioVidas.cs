@@ -1,27 +1,36 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
 
 public class CambioVidas : MonoBehaviour
 {
-    /* [SerializeField] GameObject otroObjeto;
-     private Variables_Publicas variables_Publicas;
+   /* [SerializeField] Slider mySlider;
+    //[SerializeField] GameObject otroObjeto;
+    private Variables_Publicas variables_Publicas;
      float vidas;
-     [SerializeField] Slider mySlider;
+     
 
      // Start is called before the first frame update
      void Start()
      {
-         variables_Publicas = otroObjeto.GetComponent<Variables_Publicas>();
-         vidas = variables_Publicas.vidas;
+        // variables_Publicas = otroObjeto.GetComponent<Variables_Publicas>();
+         vidas = Variables_Publicas.vidas;
      }
 
      // Update is called once per frame
-     void Update()
+     void FixedUpdate()
      {
 
-         vidas = mySlider.value;
-         print(variables_Publicas.vidas);
-     }*/
+        vidas = mySlider.value;
+        //print(Variables_Publicas.vidas);
+    }
+
+     public void updateSlider()
+    {
+        print(vidas);
+        
+    }
+    */
+
 }

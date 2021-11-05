@@ -1,51 +1,51 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Variables_Publicas : MonoBehaviour
 {
     public int speed;
-    public int puntuacion;
-    public  int vidas;
+    [SerializeField] Slider mySlider;
+    public static int vidasMax;
+    public static int vidasRestantes;
 
-
+    
 
     // Start is called before the first frame update
     void Start()
     {
         speed = 25;
-        vidas = 3;
-        StartCoroutine("puntSum");
+        vidasRestantes = vidasMax;
         
-
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        //StartCoroutine("aumentoDevelocidad");
+        vidasMax = (int)mySlider.value;
+        string sceneName = SceneManager.GetActiveScene().name;
+        if (sceneName == "Muerte")
+        {
+            vidasRestantes = 0;
+        }
 
-        if (vidas < 1)
-        {
-            StopAllCoroutines();
-        }
-    }
-    IEnumerator puntSum()
-    {
-        while (true)
-        {
-            puntuacion++;
-            print(puntuacion);
-            yield return new WaitForSeconds(1f);
-        }
     }
 
-   /*IEnumerator aumentoDevelocidad()
+    public int GetLives()
     {
-        if (puntuacion > 100)
-        {
-            speed = 50;
-        }
-        yield return new WaitForSeconds(0.01f);
-    }*/
+        int livesRet = vidasRestantes;
+        return (livesRet);
+    }
+
+    public void updateSlider()
+    {
+        
+        print(vidasRestantes);
+
+    }
+
+
+
 }

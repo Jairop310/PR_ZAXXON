@@ -29,6 +29,9 @@ public class Move_Bala : MonoBehaviour
         if (other.gameObject.layer == 16)
         {
             Destroy(other.gameObject);
+            Destroy(gameObject);
         }
     }
+
+    
 }
