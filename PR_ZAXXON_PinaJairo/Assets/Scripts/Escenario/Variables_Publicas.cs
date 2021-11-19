@@ -7,8 +7,7 @@ using UnityEngine.SceneManagement;
 public class Variables_Publicas : MonoBehaviour
 {
     public int speed;
-    [SerializeField] Slider mySlider;
-    public static int vidasMax;
+    
     public static int vidasRestantes;
 
     
@@ -16,15 +15,20 @@ public class Variables_Publicas : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (CambioVidas.vidasMax < 4)
+        {
+            CambioVidas.vidasMax = 3;
+        }
         speed = 25;
-        vidasRestantes = vidasMax;
+        vidasRestantes = CambioVidas.vidasMax;
+        
         
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        vidasMax = (int)mySlider.value;
+        
         string sceneName = SceneManager.GetActiveScene().name;
         if (sceneName == "Muerte")
         {
@@ -39,12 +43,7 @@ public class Variables_Publicas : MonoBehaviour
         return (livesRet);
     }
 
-    public void updateSlider()
-    {
-        
-        print(vidasRestantes);
-
-    }
+    
 
 
 

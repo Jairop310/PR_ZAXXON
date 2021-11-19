@@ -21,6 +21,7 @@ public class Puntuacion : MonoBehaviour
     void Start()
     {
         StartCoroutine("puntSum");
+        Reset();
         //variables_Publicas = otroObjeto.GetComponent<Variables_Publicas>();
     }
 
@@ -43,16 +44,20 @@ public class Puntuacion : MonoBehaviour
     }
     IEnumerator puntSum()
     {
-        string sceneName = SceneManager.GetActiveScene().name;
-        if (sceneName == "Juego")
-        {
-            puntuacion = 0;
-        }
+      
         while (true)
         {
             puntuacion++;
             
             yield return new WaitForSeconds(1f);
+        }
+    }
+    void Reset()
+    {
+        string sceneName = SceneManager.GetActiveScene().name;
+        if (sceneName == "Juego")
+        {
+            puntuacion = 0;
         }
     }
 

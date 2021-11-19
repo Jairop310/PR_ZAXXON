@@ -50,12 +50,7 @@ public class Instanciador : MonoBehaviour
             speed = variables_Publicas.speed;
             intervalo = distance / speed;
            //Posicionamiento de los prefabs aleatorio y dependiendo del tipo de prefab
-           if(obstaculos[numA].tag == "Pared")
-            {
-                randomX = Random.Range(-18f, 18f);
-                randomY = 0f;
-            }
-           else if (obstaculos[numA].tag == "Pared Superior")
+           if (obstaculos[numA].tag == "Pared Superior")
             {
                 randomX = Random.Range(-18f, 18f);
                 randomY = 9.5f;

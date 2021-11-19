@@ -653,6 +653,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  mySlider: {fileID: 0}
 --- !u!1 &717239629
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,6 +10,7 @@ TagManager:
   - Disparo
   - Velocidad
   - VidaUp
+  - Planeta_1
   layers:
   - Default
   - TransparentFX
