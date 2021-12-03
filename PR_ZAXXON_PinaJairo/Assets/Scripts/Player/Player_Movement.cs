@@ -107,10 +107,10 @@ public class Player_Movement : MonoBehaviour
             }
             else
             {
-                
                 //Script para que el mesh Renderer del hijo desaparezca
                 gameObject.GetComponentInChildren<MeshRenderer>().enabled = false;
-                SceneManager.LoadScene(4);
+                variables_Publicas.speed = 0;
+                Invoke("muerte", 3);
             }
 
         }
@@ -143,6 +143,13 @@ public class Player_Movement : MonoBehaviour
             print("Disparando");
             Instantiate(bala, cannon);
         }
+    }
+
+    void muerte()
+    {
+        
+        
+        SceneManager.LoadScene(4);
     }
 
 }

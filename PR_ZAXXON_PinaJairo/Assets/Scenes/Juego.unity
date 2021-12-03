@@ -226,8 +226,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -548,12 +548,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 729418907}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.76, y: 0, z: 186}
-  m_LocalScale: {x: 1074.85, y: 1074.85, z: 570.8098}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 70, y: 28.927002, z: 10.64386}
+  m_LocalScale: {x: 1988.2574, y: 1074.85, z: 570.8098}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_Father: {fileID: 1983700402}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &819391680
 GameObject:
@@ -786,7 +786,7 @@ GameObject:
   - component: {fileID: 1332756495}
   - component: {fileID: 1332756494}
   m_Layer: 0
-  m_Name: w
+  m_Name: Suelo_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -863,11 +863,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1332756493}
   m_LocalRotation: {x: -0, y: -0, z: -0.5642415, w: 0.8256098}
-  m_LocalPosition: {x: -301, y: -28.926998, z: 175.35614}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 71.859886, y: 1, z: 80.816}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_Father: {fileID: 1983700402}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -68.699}
 --- !u!1 &1452933606
 GameObject:
@@ -935,8 +935,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1405,18 +1405,18 @@ MonoBehaviour:
   - {fileID: 1579930745418715310, guid: a2806b817c5c3874eac1c9b6041e227c, type: 3}
   - {fileID: 1579930745418715310, guid: a2806b817c5c3874eac1c9b6041e227c, type: 3}
   - {fileID: 1579930745418715310, guid: a2806b817c5c3874eac1c9b6041e227c, type: 3}
-  - {fileID: 1643580424290476588, guid: 30a9fc0053dca714d878a34454faefd4, type: 3}
-  - {fileID: 1643580424290476588, guid: 30a9fc0053dca714d878a34454faefd4, type: 3}
-  - {fileID: 1643580424290476588, guid: 30a9fc0053dca714d878a34454faefd4, type: 3}
-  - {fileID: 1643580424290476588, guid: 30a9fc0053dca714d878a34454faefd4, type: 3}
-  - {fileID: 3244962180176717377, guid: d8f8fd927b84d0a47986de7ee6a03d92, type: 3}
-  - {fileID: 3244962180176717377, guid: d8f8fd927b84d0a47986de7ee6a03d92, type: 3}
-  - {fileID: 3244962180176717377, guid: d8f8fd927b84d0a47986de7ee6a03d92, type: 3}
-  - {fileID: 3244962180176717377, guid: d8f8fd927b84d0a47986de7ee6a03d92, type: 3}
+  - {fileID: 4304745880893780748, guid: 71253c434b6bdef4a86c526db840af82, type: 3}
+  - {fileID: 4304745880893780748, guid: 71253c434b6bdef4a86c526db840af82, type: 3}
+  - {fileID: 4304745880893780748, guid: 71253c434b6bdef4a86c526db840af82, type: 3}
+  - {fileID: 4304745880893780748, guid: 71253c434b6bdef4a86c526db840af82, type: 3}
+  - {fileID: 7442708253905675065, guid: e0a85edb3e4bb2847abf503fbfb094c6, type: 3}
+  - {fileID: 7442708253905675065, guid: e0a85edb3e4bb2847abf503fbfb094c6, type: 3}
+  - {fileID: 7442708253905675065, guid: e0a85edb3e4bb2847abf503fbfb094c6, type: 3}
+  - {fileID: 7442708253905675065, guid: e0a85edb3e4bb2847abf503fbfb094c6, type: 3}
   - {fileID: 8782332904730968962, guid: 8f88cfd812ce4724caae067de317ded7, type: 3}
   - {fileID: 2883699844877614592, guid: 429b6e838af58a444ba7bd13b9e64789, type: 3}
   - {fileID: 4103217920932635300, guid: 0e4b99a11890e9d4586fb531269011e1, type: 3}
-  - {fileID: 1378652511089286096, guid: 469c28506d829034ab46915850fefaaa, type: 3}
+  - {fileID: 7442708253905675065, guid: e0a85edb3e4bb2847abf503fbfb094c6, type: 3}
   instantiatePosicion: {fileID: 1658595626}
   otroObjeto: {fileID: 0}
   posZcolumna1: 50
@@ -1477,7 +1477,7 @@ GameObject:
   - component: {fileID: 1794326125}
   - component: {fileID: 1794326124}
   m_Layer: 0
-  m_Name: w (1)
+  m_Name: Suelo_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1553,12 +1553,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1794326123}
-  m_LocalRotation: {x: 0, y: 0, z: 0.5450049, w: 0.8384329}
-  m_LocalPosition: {x: 409, y: -28.926998, z: 175.35614}
+  m_LocalRotation: {x: -0, y: -0, z: 0.5450049, w: 0.8384329}
+  m_LocalPosition: {x: 710, y: 0, z: 0}
   m_LocalScale: {x: 71.859886, y: 1, z: 80.816}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_Father: {fileID: 1983700402}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 66.05}
 --- !u!1 &1846727187
 GameObject:
@@ -1686,6 +1686,39 @@ RectTransform:
   m_AnchoredPosition: {x: -320.2, y: 126.1}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1983700401
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1983700402}
+  m_Layer: 0
+  m_Name: Escenario
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1983700402
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1983700401}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -301, y: -28.927002, z: 175.35614}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 729418911}
+  - {fileID: 1332756497}
+  - {fileID: 1794326127}
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2088667290
 GameObject:
   m_ObjectHideFlags: 0
