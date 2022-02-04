@@ -24,9 +24,7 @@ public class Player_Movement : MonoBehaviour
     public Gradient gradient;
     public Image fill;
 
-    //Instanciar balas
-    public GameObject bala;
-    public Transform cannon;
+
 
     
 
@@ -44,7 +42,7 @@ public class Player_Movement : MonoBehaviour
     {
         MoverNave();
         TakeDamage();
-        Disparo();
+
       
         speed = variables_Publicas.speed;
         vidas = Variables_Publicas.vidasRestantes;
@@ -136,14 +134,7 @@ public class Player_Movement : MonoBehaviour
         fill.color = gradient.Evaluate(slider.normalizedValue);
         slider.value = Variables_Publicas.vidasRestantes;
     }
-    void Disparo()
-    {
-        if (Input.GetKeyDown("space"))
-        {
-            print("Disparando");
-            Instantiate(bala, cannon);
-        }
-    }
+    
 
     void muerte()
     {
