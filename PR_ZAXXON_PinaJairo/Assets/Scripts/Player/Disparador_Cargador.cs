@@ -25,12 +25,15 @@ public class Disparador_Cargador : MonoBehaviour
 
     public bool needReload = false;
 
+    //Audio
+    AudioSource audioSource;
+
     // Start is called before the first frame update
     void Start()
     {
         maxAmmo = 50;
         currentAmmo = 10;
-        
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -49,6 +52,7 @@ public class Disparador_Cargador : MonoBehaviour
             Instantiate(bala, cannon);
             currentAmmo--;
             balasDisparadas++;
+            audioSource.Play();
         }
     }
 
