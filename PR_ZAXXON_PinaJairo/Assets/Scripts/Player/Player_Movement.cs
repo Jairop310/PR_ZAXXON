@@ -145,8 +145,7 @@ public class Player_Movement : MonoBehaviour
 
     void muerte()
     {
-        
-        
+
         SceneManager.LoadScene(4);
     }
 
