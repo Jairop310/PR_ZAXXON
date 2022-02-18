@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.ParticleSystemJobs;
+
 
 public class Player_Movement : MonoBehaviour
 {
@@ -24,17 +26,20 @@ public class Player_Movement : MonoBehaviour
     public Gradient gradient;
     public Image fill;
 
+    //Sistema de Particulas
 
+    [SerializeField] private GameObject _explosion;
 
-    
 
     // Start is called before the first frame update
     void Start()
     {
         //Llamada de variables que estan en otros scripts
         variables_Publicas = otroObjeto.GetComponent<Variables_Publicas>();
+
         
-   
+
+
     }
 
     // Update is called once per frame
@@ -105,10 +110,12 @@ public class Player_Movement : MonoBehaviour
             }
             else
             {
+                Instantiate(_explosion, transform.position, Quaternion.identity);
                 //Script para que el mesh Renderer del hijo desaparezca
                 gameObject.GetComponentInChildren<MeshRenderer>().enabled = false;
                 variables_Publicas.speed = 0;
                 Invoke("muerte", 3);
+
             }
 
         }
@@ -142,6 +149,8 @@ public class Player_Movement : MonoBehaviour
         
         SceneManager.LoadScene(4);
     }
+
+
 
 }
 
